@@ -14,4 +14,8 @@ class ListNegotiations {
 		return [].concat(this._negotiations);
 	}
 
+	delNegotiations () {
+		this._negotiations = [];
+	}
+
 }

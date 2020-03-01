@@ -11,6 +11,8 @@
 
     <h1 class="text-center">Negociações</h1>
 
+	<div id="messages"></div>
+
     <form class="form" onSubmit="negotiation.add(event)">
 
         <div class="form-group">
@@ -35,33 +37,22 @@
         <button class="btn btn-primary text-center" type="button">
             Importar Negociações
         </button>
-        <button class="btn btn-primary text-center" type="button">
+        <button onclick="negotiationController.delNegotiations()" class="btn btn-primary text-center" type="button">
             Apagar
         </button>
     </div> 
     <br>
     <br>
 
-    <table class="table table-hover table-bordered">
-        <thead>
-            <tr>
-                <th>DATA</th>
-                <th>QUANTIDADE</th>
-                <th>VALOR</th>
-                <th>VOLUME</th>
-            </tr>
-        </thead>
-
-        <tbody>
-        </tbody>
-
-        <tfoot>
-        </tfoot>
-    </table>
+	<div id="tableView"></div>
 <script src="js/app/models/Negotiation.js"></script>
 <script src="js/app/controllers/NegotiationController.js"></script>
 <script src="js/app/helpers/DateHelper.js"></script>
 <script src="js/app/models/ListNegotiations.js"></script>
+<script src="js/app/models/Messages.js"></script>
+<script src="js/app/views/View.js"></script>
+<script src="js/app/views/NegotiationsView.js"></script>
+<script src="js/app/views/MessagesView.js"></script>
 <script>
 	let negotiation = new NegotiationController();
 </script>
